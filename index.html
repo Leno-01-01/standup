@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد الصالح | مسيرة العروض</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Cairo',sans-serif;}
+body{background:black; color:white; overflow-x:hidden;}
+
+/* المسرح */
+.stage{position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;}
+.background-image{position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("https://i.postimg.cc/zfmNWcK9/IMG-8590.jpg"); background-size:cover; background-position:center; z-index:1;}
+.curtain{position:absolute; top:0; width:50%; height:100%; background:linear-gradient(to right,#5c0000,#a80000,#5c0000); z-index:3; transition:2.5s ease-in-out;}
+.curtain.left{ left:0; box-shadow:inset -20px 0 40px rgba(0,0,0,0.8);}
+.curtain.right{ right:0; box-shadow:inset 20px 0 40px rgba(0,0,0,0.8);}
+.curtain.open.left{ transform:translateX(-100%); }
+.curtain.open.right{ transform:translateX(100%); }
+
+.hero-content{position:relative; z-index:2; opacity:0; transform:translateY(20px); transition:1.5s ease 2.5s;}
+.hero-content.show{opacity:1; transform:translateY(0);}
+.hero-content h1{
+  font-family:'Cairo',sans-serif;
+  font-weight:900;
+  color:#fff;
+  font-size:64px;
+  text-shadow:0 0 20px rgba(255,255,255,0.8);
+}
+.hero-content p{font-size:22px; margin-top:10px; color:#ddd;}
+.insta-btn{background:#c40000; color:white; padding:15px 40px; border:none; border-radius:50px; font-size:18px; cursor:pointer; transition:0.3s; text-decoration:none; display:inline-block;}
+.insta-btn:hover{background:#ff0000; box-shadow:0 0 20px red; transform:scale(1.05);}
+
+/* Timeline */
+.timeline-line{background: linear-gradient(180deg, #FFD700, #B8860B); width: 4px; position: absolute;}
+.timeline-dot{width: 24px; height: 24px; background: linear-gradient(135deg, #FFD700, #FFA500); border: 4px solid #0d0d0d; border-radius: 50%; animation: dotGlow 2s ease-in-out infinite;}
+@keyframes dotGlow{0%,100%{box-shadow:0 0 20px rgba(255,215,0,0.8),0 0 40px rgba(255,215,0,0.4);}50%{box-shadow:0 0 30px rgba(255,215,0,1),0 0 60px rgba(255,215,0,0.6);}}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="stage">
+  <div class="background-image"></div>
+  <div class="curtain left"></div>
+  <div class="curtain right"></div>
+  <div class="hero-content">
+    <h1>محمد الصالح</h1>
+    <p>نبذه عن عروض محمد الصالح</p>
+  </div>
+</section>
+
+<!-- Stats / إنجازات -->
+<section class="py-20 px-6 bg-gradient-to-b from-black via-gray-950 to-black">
+ <div class="max-w-6xl mx-auto text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-yellow-500 mb-12">🌟 إنجازات على المسرح 🌟</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+   <div class="stat-card rounded-2xl p-6">
+    <div class="text-4xl md:text-5xl font-black text-yellow-500">+50</div>
+    <div class="text-gray-400 mt-2">عرض كوميدي</div>
+   </div>
+   <div class="stat-card rounded-2xl p-6">
+    <div class="text-4xl md:text-5xl font-black text-yellow-500">+10</div>
+    <div class="text-gray-400 mt-2">دول</div>
+   </div>
+   <div class="stat-card rounded-2xl p-6">
+    <div class="text-4xl md:text-5xl font-black text-yellow-500">MBC</div>
+    <div class="text-gray-400 mt-2">ظهور تلفزيوني</div>
+   </div>
+ </div>
+</div>
+</section>
+
+<!-- Timeline Section -->
+<section class="py-20 px-6 bg-black relative">
+ <div class="max-w-5xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-yellow-500 text-center mb-16">🎬 مسيرة العروض 🎬</h2>
+
+  <div class="relative space-y-16">
+
+    <!-- 2013 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2013</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">أول عرض ستاند أب</h3>
+          <p class="text-gray-300 text-sm">معرض كويتي قوت تالنت</p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2014-2017 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2014-2017</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض جامعات ومسرح</h3>
+          <p class="text-gray-300 text-sm">
+           جامعة الكويت: كليات الآداب، التربية، العلوم الإدارية، الحقوق، الطب<br>
+           الجامعة العربية المفتوحة: مسرح كيفان – كليات الآداب، الحقوق، العلوم الطبية المساعدة
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2015 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2015</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض مسرحية</h3>
+          <p class="text-gray-300 text-sm">
+           مسرح بنيد القار في العيد – كليات الحقوق والتربية<br>
+           جامعة K Law
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2016 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2016</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض متنوعة</h3>
+          <p class="text-gray-300 text-sm">
+            ساعد في تأسيس نادي الكويت للكوميديا<br>
+           مركز التوحد 8 عروض مع نادي الكويت للكوميديا<br>
+           كلية العلوم الإدارية، جدة – المملكة العربية السعودية
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2017 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2017</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض محلية وعالمية</h3>
+          <p class="text-gray-300 text-sm">
+           مسرح مجمع ديسكفري – 8 عروض مع نادي الكويت للكوميديا<br>
+           الدمام – بيت الكوميديا، المملكة العربية السعودية<br>
+           ولاية أتلانتا – اتحاد الطلبة، الولايات المتحدة الأمريكية<br>
+            الجامعة العربية المفتوحة، المدينة المنورة – المملكة العربية السعودية
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2018 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2018</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض متنوعة حول العالم</h3>
+          <p class="text-gray-300 text-sm">
+           مسرح مجمع ديسكفري – 6 عروض مع نادي الكويت للكوميديا<br>
+          ولاية دالاس – اتحاد الطلبة، الولايات المتحدة الأمريكية<br>
+          الدمام – بيت الكوميديا، المملكة العربية السعودية<br>
+           دبلن – اتحاد الطلبة، أيرلندا<br>
+           جامعة AUM، البحرين
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2019 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2019</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض دولية</h3>
+          <p class="text-gray-300 text-sm">
+           هاليفاكس – كندا، اتحاد الطلبة<br>
+            الجامعة الاسترالية في الكويت<br>
+           7 عروض مع نادي الكويت للكوميديا
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2020</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض في الإمارات</h3>
+          <p class="text-gray-300 text-sm">الشارقة – الإمارات</p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2022</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض الرياض</h3>
+          <p class="text-gray-300 text-sm">الكوميدي بود، مسرح البوليفارد</p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2023</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض الرياض</h3>
+          <p class="text-gray-300 text-sm">الكوميدي بود، ون مايك</p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2024</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض دولية</h3>
+          <p class="text-gray-300 text-sm">
+           سكوتلندا – جلاسكو، الجمعية العمومية في سكوتلندا<br>
+            الرياض – الكوميدي بود، ون مايك<br>
+           البحرين<br>
+          </p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pr-12 md:text-right order-1">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2025</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض مميزة</h3>
+          <p class="text-gray-300 text-sm">
+    2025
+سكوتلندا – جلاسكو الجمعيه العموميه في سكوتلندا
+الجامعه الاستراليه في الكويت
+كليه بوكسهيل في الكويت 
+4 عروض 
+ وقف ستاند اب في مسرح طارق العلي مع محمد MBC
+          </p>
+
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-2"><div class="timeline-dot"></div></div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="md:flex md:items-start">
+      <div class="md:w-1/2 md:pl-12 md:text-left order-2">
+        <div class="p-6 rounded-2xl border border-yellow-500">
+          <span class="text-4xl md:text-5xl font-black text-yellow-500">2026</span>
+          <h3 class="text-lg font-bold text-red-500 mt-4 mb-3">عروض طلابية</h3>
+          <p class="text-gray-300 text-sm">طلبة جامعة نورث أمبريا في نيوكاسل</p>
+        </div>
+      </div>
+      <div class="hidden md:flex md:w-12 justify-center order-1"><div class="timeline-dot"></div></div>
+    </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- Footer ختامية سلسة واحترافية -->
+<footer class="relative bg-black py-16 text-center text-gray-300 overflow-hidden">
+ <!-- خلفية متدرجة خفيفة -->
+  <div class="absolute inset-0 bg-gradient-to-t from-yellow-500 via-orange-500 to-red-500 opacity-10 pointer-events-none animate-gradient-slow"></div>
+
+ <!-- نص الشكر -->
+  <p class="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-lg animate-fade-in-up">
+   شكرا لحضورك 🎭
+  </p>
+
+ <!-- النص الإضافي -->
+  <p class="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+   هذا الانستا اذا حاب تتطمش اكثر وعلشان لما تصورني تسويلي تاق 😂
+  </p>
+
+ <!-- زر الإنستغرام -->
+  <a href="https://www.instagram.com/malsaleh90?igsh=MWM3ZjJocm0wa3pmaQ==" 
+     target="_blank"
+     class="inline-block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-black font-bold py-3 px-12 rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-3xl animate-fade-in-up delay-400">
+    تابع على الإنستغرام
+  </a>
+
+<!-- تأثيرات CSS للأنيميشن والخلفية -->
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 1s forwards; }
+    .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+    .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+
+    @keyframes gradientSlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-slow { background-size: 200% 200%; animation: gradientSlow 12s ease infinite; }
+  </style>
+</footer>
+
+<script>
+window.onload = function(){
+// فتح الستارة
+  document.querySelector(".curtain.left").classList.add("open");
+  document.querySelector(".curtain.right").classList.add("open");
+
+ // ظهور اسم محمد الصالح بعد الستارة
+  setTimeout(() => {
+    document.querySelector(".hero-content").classList.add("show");
+  }, 2500);
+}
+</script>
+
+</body>
+</html>
